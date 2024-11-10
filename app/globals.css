@@ -3,25 +3,99 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.fontcolor{
+  color: rgb(217, 194, 100);
+}
+
+@font-face {
+  font-family: alib;
+  src: url('/fonts/alib-Bold.ttf');
+}
+.alib {
+  font-family: alib;
+}
+@font-face {
+  font-family: alib;
+  src: url('/fonts/Alibaba-Bold.ttf');
+}
+.alib {
+  font-family: alib;
+}
+@font-face {
+  font-family: aliblk;
+  src: url('/fonts/Alibaba-Black.ttf');
+}
+.aliblk {
+  font-family: aliblk;
+}
+@font-face {
+  font-family: alil;
+  src: url('/fonts/Alibaba-Light.ttf');
+}
+.alil {
+  font-family: alil;
+}
+@font-face {
+  font-family: alir;
+  src: url('/fonts/Alibaba-Regular.ttf');
+}
+.alir {
+  font-family: alir;
+}
+
+@font-face {
+  font-family: nast;
+  src: url('/fonts/IranNastaliq.ttf');
+}
+.nast {
+  font-family: nast;
+}
+@font-face {
+  font-family: zey;
+  src: url('/fonts/IRZeytoon.ttf');
+}
+.zey {
+  font-family: zey;
+}
+
+@font-face {
+  font-family: ag;
+  src: url('/fonts/AutogateRegular.ttf');
+}
+.ag {
+  font-family: ag;
+}
+
+.slick-slide > div {
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slick-slide {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
